@@ -1,35 +1,34 @@
 
-
-
-
-let initialState = {
-   todo:[],
-   count:5
+let initialCount = {
+    count : 1001
 }
 
-
-
-
-const Myreducer = (state = initialState,action)=>{
+let countReducer = (state=initialCount,action)=>{
     switch(action.type){
-        case "SUCCESS":
+        case "INCRES":
             return {
-                ...state,
-                todo: action.payload
+                count : state.count+1
             }
-        case "INC":
+        case "DECRESE":
             return {
-                ...state,
-                count:state.count + 1,
+                count : state.count-1
             }
-        case "DEC":
+        case "RESET":
             return {
-                ...state,
-                count:state.count-1
+                count : 0
             }
         default :
-            return state
+        return state
     }
 }
 
-export default Myreducer;
+export default countReducer
+
+
+
+
+
+
+
+
+

@@ -9,7 +9,8 @@ import {fetceData} from "./service/action"
 
 const DataApp = ()=>{
 
-    let mystate = useSelector((state)=> state)
+    let mystate = useSelector((state)=> state.arr)
+    // console.log(mystate)
     let dispatch = useDispatch()
 
 
