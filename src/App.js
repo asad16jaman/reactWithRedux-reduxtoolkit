@@ -1,9 +1,15 @@
 
-import Cunt from "./cnt1"
+import CounterView from "./features/counter/counterView"
+
+
+
 
 const App = ()=>{
 
-  return <Cunt />
+  return <div>
+      <CounterView />
+    
+     </div>
 }
 
 export default App
